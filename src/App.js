@@ -1,20 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-import Button from '@mui/material/Button'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/home/home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Button variant="contained" color="primary">
-          Hello World
-        </Button>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
