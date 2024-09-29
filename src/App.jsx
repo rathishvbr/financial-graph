@@ -15,14 +15,14 @@ function App() {
   return (
     <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
       <CssBaseline />
-      <div style={{ padding: '16px' }}>
+      <div className='flex justify-center items-center h-screen'>
         <IconButton aria-label="Toggle Theme" onClick={toggleTheme}>
           {isDarkMode ? <LightModeIcon /> : <DarkModeIcon />}
         </IconButton>
       </div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
